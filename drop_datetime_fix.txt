@@ -1,0 +1,6 @@
+# Drop the Date/Time column as it's not useful for correlation analysis or prediction
+if 'Date/Time' in df.columns:
+    df = df.drop(columns=['Date/Time'])
+    print("✓ Dropped 'Date/Time' column")
+    print(f"Updated dataset shape: {df.shape}")
+    print(f"Remaining columns: {df.columns.tolist()}")
